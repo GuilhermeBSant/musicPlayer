@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    box-sizing: none;
+}
+body{
+    background-color: #e0e0e0;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+.main{
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 90vh;
+    width: 40%;
+    border-radius: 83px;
+    background: #e0e0e0;
+    box-shadow:  31px 31px 63px #d0d0d0,
+             -31px -31px 63px #f0f0f0;
+}
+
+.buttons{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button{
+    border: none;
+    background-color: transparent;
+}
+
+.music-photo{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba(107, 209, 149, 0.37);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border-radius: 30px;
+}
+
+.music-photo img{
+    image-rendering: auto;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+#music-playing{
+    background-color: red;
+}
+
+.buttons svg:hover:nth-child(1),svg:hover:nth-child(2), svg:hover:nth-child(3) {
+    stroke: rgb(0, 185, 77);
+}
