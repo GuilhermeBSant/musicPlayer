@@ -23,3 +23,18 @@ playMusicButton.addEventListener("click", () => {
 nextMusicButton.addEventListener("click", () => {
     
 })
+
+music.addEventListener("timeupdate", () => {
+    let bar = document.querySelector(".bar")
+    let currentMomentOMusic = Math.floor((music.currentTime / music.duration) * 100)
+    bar.setAttribute("style", `width: ${currentMomentOMusic}%`)
+    let musicTime = document.querySelector("#time")
+    musicTime.textContent = secondsForMinutes(Math.floor(music.currentTime))
+})
+
+function secondsForMinutes(seconds){
+    let minuteSpace = Math.floor(seconds/60);
+    let secondSpace = seconds%60
+    if(secondSpace < 10) { secondSpace = `0${secondSpace}` }
+    if(minuteSpace<10) { return "0"+minuteSpace+":"+secondSpace }else{ return minuteSpace+":"+secondSpace}
+}
