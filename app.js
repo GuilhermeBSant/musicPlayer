@@ -52,7 +52,7 @@ playMusicButton.addEventListener("click", () => {
 })
 
 nextMusicButton.addEventListener("click", () => {
-    if(musicIndex >=(musicsProps.length - 1)){
+    if(musicIndex >=2){
         musicIndex = 0
     }
     musicIndex++
