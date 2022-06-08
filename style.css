@@ -20,7 +20,7 @@ main{
     align-items: center;
     display: flex;
     height: 90vh;
-    width: 40%;
+    width: 60%;
     border-radius: 83px;
     background: #e0e0e0;
     box-shadow:  31px 31px 63px #d0d0d0,
@@ -39,7 +39,7 @@ main{
 }
 
 .music-photo{
-    width: 50%;
+    width: 60%;
     height: 50%;
     display: flex;
     justify-content: center;
@@ -64,4 +64,11 @@ main{
 
 .buttons svg:hover:nth-child(1),svg:hover:nth-child(2), svg:hover:nth-child(3) {
     stroke: rgb(0, 185, 77);
+}
+.play-music{
+    display: block;
+}
+
+.pause-music{
+    display: none;
 }

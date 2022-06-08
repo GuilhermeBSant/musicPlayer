@@ -1,14 +1,25 @@
-let b1 = document.querySelectorAll(".music-button")[0];
-let b2 = document.querySelectorAll(".music-button")[1];
-let b3 = document.querySelectorAll(".music-button")[2];
+let pastMusicButton = document.querySelectorAll(".music-button")[0];
+let pauseMusicButton = document.querySelectorAll(".music-button")[1];
+let playMusicButton = document.querySelectorAll(".music-button")[2];
+let nextMusicButton = document.querySelectorAll(".music-button")[3];
+let music = document.querySelector("audio")
 
-b1.addEventListener("click", () => {window.location.reload()})
-b2.addEventListener("click", () => {
-    
-    b2.setAttribute("class","stopMusic")
-    b2.setAttribute("data-feather","play-circle")
-    feather.replace()
-    
+pastMusicButton.addEventListener("click", () => {
+
 })
 
-b3.addEventListener("click", () => {window.location.reload()})
+pauseMusicButton.addEventListener("click", () => {
+    music.pause()
+    document.querySelector(".play-music").style.display = "block"
+    document.querySelector(".pause-music").style.display = "none"
+})
+
+playMusicButton.addEventListener("click", () => {
+    music.play()
+    document.querySelector(".play-music").style.display = "none"
+    document.querySelector(".pause-music").style.display = "block"
+})
+
+nextMusicButton.addEventListener("click", () => {
+    
+})
