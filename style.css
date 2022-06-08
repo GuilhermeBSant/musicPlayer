@@ -20,7 +20,7 @@ main{
     align-items: center;
     display: flex;
     height: 90vh;
-    width: 60%;
+    width: 40%;
     border-radius: 83px;
     background: #e0e0e0;
     box-shadow:  31px 31px 63px #d0d0d0,
@@ -39,7 +39,7 @@ main{
 }
 
 .music-photo{
-    width: 60%;
+    width: 50%;
     height: 50%;
     display: flex;
     justify-content: center;
