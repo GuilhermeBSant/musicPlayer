@@ -5,5 +5,5 @@
 ⚙️ Click here for test: https://guilhermebsant.github.io/musicPlayer/
 
 ## To-do✅
-• Connect/Create to a API that give me random musics with link, title and artist from youtube.
+• Connect/Create to a API that give me random musics with link, title and artist from youtube.<br />
 • Make this project resposive.
