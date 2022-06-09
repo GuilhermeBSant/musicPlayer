@@ -32,10 +32,10 @@ window.onload = renderMusic(0)
 
 //Events
 previousMusicButton.addEventListener("click", () => {
-    if(musicIndex <= 0){
+    musicIndex--
+    if(musicIndex < 0){
         musicIndex = 2
     }
-    musicIndex--
     renderMusic(musicIndex)
 })
 
@@ -52,10 +52,10 @@ playMusicButton.addEventListener("click", () => {
 })
 
 nextMusicButton.addEventListener("click", () => {
-    if(musicIndex >=2){
+    musicIndex++
+    if(musicIndex > 2){
         musicIndex = 0
     }
-    musicIndex++
     renderMusic(musicIndex)
 })
 
