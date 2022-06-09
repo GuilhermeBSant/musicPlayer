@@ -58,17 +58,48 @@ main{
     height: 100%;
 }
 
-#music-playing{
-    background-color: red;
-}
-
 .buttons svg:hover:nth-child(1),svg:hover:nth-child(2), svg:hover:nth-child(3) {
     stroke: rgb(0, 185, 77);
 }
+
+.buttons svg:focus:nth-child(4) {
+    stroke: rgb(0, 185, 77);
+}
+
 .play-music{
     display: block;
 }
 
 .pause-music{
     display: none;
+}
+
+.drop-up{
+    display: none;
+    transform: rotate(-90deg);
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    position: absolute;
+    height: 1.80rem;
+    padding: 0px 5px;
+}
+
+#volume-bar{
+    -webkit-appearance: none;
+    outline: none;
+    background: rgb(0, 185, 77);
+    border-radius: 15px;
+    height: 0.5rem;
+}
+
+#volume-bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50px;
+    background: rgb(2, 121, 51);
+}
+
+.volume-icon{
+    margin-top: 0.4rem;
 }
