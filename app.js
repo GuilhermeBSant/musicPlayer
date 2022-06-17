@@ -5,6 +5,7 @@ let nextMusicButton = document.querySelectorAll(".music-button")[3];
 let volumeButton = document.querySelectorAll(".music-button")[4];
 let dropUp = document.querySelector(".drop-up")
 let volumeBar = document.querySelector("#volume-bar");
+let musicBar = document.querySelector(".bar");
 let music = document.querySelector("audio");
 let musicIndex = 0 ;
 let buttonForVolume = 0;
@@ -52,6 +53,7 @@ pauseMusicButton.addEventListener("click", () => {
 
 playMusicButton.addEventListener("click", () => {
     playMusic()
+    
 })
 
 nextMusicButton.addEventListener("click", () => {
@@ -64,11 +66,17 @@ nextMusicButton.addEventListener("click", () => {
 })
 
 music.addEventListener("timeupdate", () => {
+    let musicDuration = document.querySelector("#music-duration-tag")
+    musicDuration.textContent = secondsForMinutes(Math.floor(music.duration))
     let bar = document.querySelector(".bar")
-    let currentMomentOMusic = Math.floor((music.currentTime / music.duration) * 100)
-    bar.setAttribute("style", `width: ${currentMomentOMusic}%`)
+    let currentMomentOMusic = Math.floor(music.currentTime)
+    bar.value = currentMomentOMusic
     let musicTime = document.querySelector("#time")
     musicTime.textContent = secondsForMinutes(Math.floor(music.currentTime))
+})
+
+musicBar.addEventListener("change", () => {
+    music.currentTime = Math.floor(musicBar.value)
 })
 
 volumeBar.addEventListener("change", () => {
@@ -99,6 +107,10 @@ volumeButton.addEventListener("click", () => {
     }
 })
 
+music.addEventListener("ended",() =>{
+    document.querySelector(".play-music").style.display = "block"
+    document.querySelector(".pause-music").style.display = "none"
+})
 
 //Functions
 function secondsForMinutes(seconds){
@@ -116,6 +128,7 @@ function playMusic(){
     music.play()
     document.querySelector(".play-music").style.display = "none"
     document.querySelector(".pause-music").style.display = "block"
+    toggleTimerFromBar()
 }
 
 function renderMusic(index){
@@ -125,4 +138,11 @@ function renderMusic(index){
         musicArtist.textContent = musicsProps[index].artist
         musicImage.src = musicsProps[index].img
     })
+}
+
+function toggleTimerFromBar(){
+    setTimeout(() => {
+        musicBar.setAttribute("max",Math.floor(music.duration))
+    }, 100);
+    
 }
