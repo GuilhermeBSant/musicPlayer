@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAgroaAK2PFwAk/+IAZ7hUALCkJQCt5qEANLMXAHStFwAQyZ4AuLJJAKOWXwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiuwAAAAAAAlWqEAAAAAAlWhFGAAAAACERF0QAAAAAh3d3ZAAAAAAHd3AHAAAAAAAAAAcAAAAAAAAABwAAAAAAAAAHAAMAAAAAAAcAl3AAAAAABwd3mQAAAAAHd5MJAAAAAAd5AJAAAAAAB5AAAAAAAAAAAAAAD//wAA4f8AAMD/AACAfwAAgH8AAIB/AADDfwAA/38AAP9/AAD/dwAA/2MAAP9BAAD/BQAA/xsAAP8/AAD//wAA" rel="icon" type="image/x-icon" />
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Music Player</title>
 </head>
 <body>
@@ -22,9 +22,13 @@
                 </div>
             
             
-                <div class="w-2/4 bg-gray-300 rounded-full h-2.5 ">
-                    <div class="bar bg-green-500 h-2.5 rounded-full" style="width: 0%"></div>
-                 <center><p id="time" style="margin-bottom: 30px; font-size: smaller;">00:00</p> </center>
+                <div class="">
+                    <input type="range" name="" class="bar">
+                    <div class="timer">
+                        <p id="time" style="font-size: smaller;">00:00</p>
+                        <p id="music-duration-tag" style="font-size: smaller;">00:00</p>
+                    </div>
+                 
                 </div>
                 
             

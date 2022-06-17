@@ -1,9 +1,12 @@
+
+
 *{
     margin: 0;
     box-sizing: none;
 }
 body{
     background-color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
 }
 
 main{
@@ -14,7 +17,7 @@ main{
     align-items: center;
 }
 .main{
-    gap: 2rem;
+    gap: 1.5rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -52,6 +55,7 @@ main{
 }
 
 .music-photo img{
+    object-fit: cover;
     image-rendering: auto;
     border-radius: 30px;
     width: 100%;
@@ -100,6 +104,28 @@ main{
     background: rgb(2, 121, 51);
 }
 
+.bar{
+    -webkit-appearance: none;
+    outline: none;
+    background: rgb(0, 185, 77);
+    border-radius: 15px;
+    height: 0.5rem;
+}
+
+.bar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50px;
+    background: rgb(2, 121, 51);
+}
+
 .volume-icon{
     margin-top: 0.4rem;
+}
+
+.timer{
+    display: flex;
+    justify-content: space-around;
+
 }
